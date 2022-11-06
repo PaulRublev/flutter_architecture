@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:module1_business/module1_business.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -29,10 +31,16 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'User\'s name:',
             ),
             Text(
-              '$_counter',
+              _counter == 0
+                  ? context.read<MainBloc>().userService.getDefaultUser().name
+                  : context
+                      .read<MainBloc>()
+                      .userService
+                      .getUserById(_counter)
+                      .name,
               style: Theme.of(context).textTheme.headline4,
             ),
           ],

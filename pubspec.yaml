@@ -33,6 +33,8 @@ dependencies:
     sdk: flutter
   module1_business:
     path: packages/module1_business
+  module1_model:
+    path: packages/module1_model
   provider: ^6.0.4
 
 

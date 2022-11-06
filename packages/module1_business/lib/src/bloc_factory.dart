@@ -14,6 +14,7 @@ class BlocFactory {
     _getIt.registerFactory(
       () => MainBloc(
         healthService: ServiceProvider.instance.get<HealthService>(),
+        userService: ServiceProvider.instance.get<UserService>(),
       ),
     );
   }

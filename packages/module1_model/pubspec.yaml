@@ -1,8 +1,7 @@
-name: module1_data
+name: module1_model
 description: A new Flutter package project.
 version: 0.0.1
 publish_to: none
-
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
@@ -11,14 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  module1_model:
-    path: ../module1_model
+  freezed: ^2.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  get_it: ^7.2.0
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

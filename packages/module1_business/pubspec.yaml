@@ -14,6 +14,8 @@ dependencies:
   get_it: ^7.2.0
   module1_data:
     path: ../module1_data
+  module1_model:
+    path: ../module1_model
     
 dev_dependencies:
   flutter_test:
