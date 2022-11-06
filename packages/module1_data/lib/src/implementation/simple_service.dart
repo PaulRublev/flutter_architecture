@@ -1,6 +1,6 @@
 import 'package:module1_data/module1_data.dart';
 
-class DummyService implements HealthService {
+class SimpleService implements HealthService {
   @override
   bool getHealth() {
     return true;

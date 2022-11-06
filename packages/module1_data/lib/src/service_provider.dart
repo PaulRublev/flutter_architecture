@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:module1_data/module1_data.dart';
 
-import 'implementation/internals.dart';
+import 'implementation/simple_service.dart';
 
 class ServiceProvider {
   static final _getIt = GetIt.I;
@@ -12,7 +12,7 @@ class ServiceProvider {
 
   void initialize() {
     _getIt.registerLazySingleton<HealthService>(
-      () => DummyService(),
+      () => SimpleService(),
     );
   }
 }

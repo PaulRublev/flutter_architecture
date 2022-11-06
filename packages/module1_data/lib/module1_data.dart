@@ -1,5 +1,4 @@
 library module1_data;
 
-export 'src/api/storage.dart';
-export 'src/api/services.dart';
+export 'src/api/health_service.dart';
 export 'src/service_provider.dart';

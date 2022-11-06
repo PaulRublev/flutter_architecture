@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:module1_business/module1_business.dart';
-import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -15,7 +13,6 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    context.read<MainBloc>().add(0);
     setState(() {
       _counter++;
     });
