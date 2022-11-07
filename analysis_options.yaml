@@ -9,6 +9,20 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  exclude:
+    - packages/**/*.freezed.dart
+  language:
+    strict-raw-types: true
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  errors:
+    depend_on_referenced_packages: ignore
+    missing_return: error
+  plugins:
+    - dart_code_metrics
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`
@@ -22,8 +36,27 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+    cancel_subscriptions: true
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
-    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 20
+    lines-of-executable-code: 50
+    maximum-nesting-level: 5
+    number-of-parameters: 4
+    souce-lines-of-code: 50
+  rules:
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-conditional-expressions
+    - no-equal-then-else
+    - prefer-trailing-comma
+
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
